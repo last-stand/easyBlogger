@@ -1,0 +1,51 @@
+= easyBlogger
+
+== Description
+This project is a Blogger. It is basically a REST api which is developed in Java using SpringBoot, Spring Security, Hibernate and JPA. For building tool "Gradle" is used. Its still is deveopment phase.
+
+== How to run the application
+=== 1. Creating database
+Run the given 'easyBlogger/api/src/main/resources/opensecret.sql' file as given below on your command line:
+----
+mysql -uroot -password < opensecret.sql
+----
+It will create database and tables with dummy data in it.
+
+=== 2. Building and deploying the application:
+Go to the root folder of the project and run shell script 'run.sh' to build the project:
+----
+sh run.sh
+----
+If you want to build project without running tests use this:
+----
+sh run.sh -xtest
+----
+
+If you want to deploy jar file after building the project:
+----
+sh run.sh -d
+----
+
+If you want to build and deploy jar file at the same time:
+----
+sh run.sh -bd
+----
+
+Since it is a rest application and it requires authentication to access it. You need to use some Rest Client like link:https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm[POSTMAN]  in your browser.
+This application will run on *9000* port as given in this url
+link:http://localhost:9000/api/authentication[localhost:9000/api/authentication]
+
+=== 3. Running application in debug mode(IntelliJIDEA):
+First build the project with tests or without tests:
+----
+sh run.sh
+----
+OR
+----
+sh run.sh -xtest
+----
+Then run the command given below:
+----
+sh run.sh --debug
+----
+The application will start listening at port 5005. You can configure your Intellij on this port for debugging.
