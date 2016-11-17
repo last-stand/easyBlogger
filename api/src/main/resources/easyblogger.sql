@@ -1,5 +1,5 @@
-create database if not exists opensecret;
-use opensecret;
+create database if not exists easyblogger;
+use easyblogger;
 
 create table if not exists user_info(
         id int unsigned AUTO_INCREMENT primary key,

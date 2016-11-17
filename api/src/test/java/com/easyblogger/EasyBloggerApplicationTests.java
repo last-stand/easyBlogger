@@ -8,7 +8,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 //@RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = EasyBloggerApplication.class)
 @WebAppConfiguration
-public class OpenSecretApplicationTests {
+public class EasyBloggerApplicationTests {
 
 	@Test
 	public void contextLoads() {

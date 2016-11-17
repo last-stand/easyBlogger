@@ -5,9 +5,9 @@ This project is a Blogger. It is basically a REST api which is developed in Java
 
 == How to run the application
 === 1. Creating database
-Run the given 'easyBlogger/api/src/main/resources/opensecret.sql' file as given below on your command line:
+Run the given 'easyBlogger/api/src/main/resources/easyblogger.sql' file as given below on your command line:
 ----
-mysql -uroot -password < opensecret.sql
+mysql -uroot -ppassword < easyblogger.sql
 ----
 It will create database and tables with dummy data in it.
 
@@ -33,7 +33,11 @@ sh run.sh -bd
 
 Since it is a rest application and it requires authentication to access it. You need to use some Rest Client like link:https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm[POSTMAN]  in your browser.
 This application will run on *9000* port as given in this url
-link:http://localhost:9000/api/authentication[localhost:9000/api/authentication]
+link:http://localhost:9000/api/authentication[localhost:9000/api/authentication]<br />
+Or You can use just use `curl`:
+```bash
+$ curl -i -H "Content-Type: application/json" -X POST -d '{"username":"admin","password":"password"}' http://localhost:9000/api/authentication
+```
 
 === 3. Running application in debug mode(IntelliJIDEA):
 First build the project with tests or without tests:

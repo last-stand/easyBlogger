@@ -12,11 +12,11 @@ case "$1" in
     ;;
     "-d")
         echo "${GREEN}## Deploying jar"
-        java -jar ${JAR} || echo "${RED} ERROR: No such jar found."
+        java -jar ${JAR}
     ;;
     "--debug")
         echo "${GREEN}## Deploying jar"
-        java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ${JAR} || echo "${RED} ERROR: No such jar found."
+        java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ${JAR}
     ;;
     "-xtest")
         echo "${GREEN}## Building with Gradle and Skipping tests"
